@@ -38,10 +38,10 @@ akam-list
 # safeMode
 
 > Safe mode limits the total number of API calls coming from Cloudflare.
->
+> true or false
 > Set to `false` if you have higher limits via a paid Cloudflare plan.
 
-true
+false
 
 # avatar
 
