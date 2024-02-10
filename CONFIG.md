@@ -35,6 +35,8 @@ akam-list
 > - did:plc:1234
 > - @spamspamspam.bsky.social
 
+- did:plc:vhzahfkwxz7x3hdx6wktxnom/app.bsky.graph.list/3kkypuchtyp2w
+
 # safeMode
 
 > Safe mode limits the total number of API calls coming from Cloudflare.
