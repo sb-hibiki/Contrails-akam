@@ -15,7 +15,9 @@ akam-list
 
 > This is the description of the feed.
 
-「赤安」が含まれているPostのフィードです
+「赤安」が含まれているPostのフィードの跡地
+
+現在はこちら https://bsky.app/profile/did:plc:vhzahfkwxz7x3hdx6wktxnom/feed/aaaiqofponcsq
 
 # searchTerms
 
