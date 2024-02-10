@@ -34,7 +34,7 @@ akam-list
 > - did:plc:1234
 > - @spamspamspam.bsky.social
 
-- did:plc:vhzahfkwxz7x3hdx6wktxnom/app.bsky.graph.list/3kkypuchtyp2w
+> - did:plc:vhzahfkwxz7x3hdx6wktxnom/app.bsky.graph.list/3kkypuchtyp2w
 
 # safeMode
 
