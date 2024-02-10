@@ -123,7 +123,8 @@ function getNormalizedQuotedPhrases(query) {
 // Specify the exact keywords. Used Regex /i for case-insensitivity
 function verifySearchTermMatch(text) {
   // const regex = /(?!(?:nsfw))(#jeopardy|#jeopardy!|(?:jeopardy!)|(?:on jeopardy!)|(?:on jeopardy))/i;
-  const regex = /(?!(赤安.?(苦手|嫌い|クソ|糞)|あかあむ.?(苦手|嫌い|クソ|糞)))(赤安|あかあむ|秀零)/;
+  // const regex = /(?!(赤安.?(苦手|嫌い|クソ|糞)|あかあむ.?(苦手|嫌い|クソ|糞)))(赤安|あかあむ|秀零)/;
+  const regex = /(赤安|あかあむ|秀零)/;
   return text.match(regex) !== null;
 }
 
