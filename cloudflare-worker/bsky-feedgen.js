@@ -120,12 +120,23 @@ function getNormalizedQuotedPhrases(query) {
   return Array.from(phrases);
 }
 
+// Specify the exact keywords. Used Regex /i for case-insensitivity
+function verifySearchTermMatch(text) {
+  const regex = /(?!(赤安.?(苦手|嫌い|クソ|糞)|あかあむ.?(苦手|嫌い|クソ|糞)))(赤安|あかあむ)/i;
+  return text.match(regex) !== null;
+}
+
 function fromSearch(query, queryIdx, response, searchParams) {
   let docs = [];
   let normalizedQuotedPhrases = getNormalizedQuotedPhrases(query);
   if (Array.isArray(response)) {
     for (let itemIdx = 0; itemIdx < response.length; itemIdx++) {
       let searchResult = response[itemIdx];
+      // Make sure the Bluesky search results do not contain any undesired results
+	  let checkResult = verifySearchTermMatch(searchResult.post.text);
+	  let expected = true;
+       // If it is a pure match, include it in the feed
+	  if (expected === checkResult) {
       if (normalizedQuotedPhrases.length > 0) {
         // perform a case-insensitive search for all quoted phrases
         let matches = true;
@@ -155,6 +166,7 @@ function fromSearch(query, queryIdx, response, searchParams) {
         offset: searchParams.offset,
       });
     }
+  }
   }
   return docs;
 }
